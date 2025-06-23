@@ -1,11 +1,13 @@
 import React from "react";
 import './Login.css';
 import { useState,useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { login } from "./app/store";
 
 export default function Login(){
-
-const [id,setId] =useState('');
-const [pw,setPw] =useState('');
+  const dispatch=useDispatch();
+  const [id,setId] =useState('');
+  const [pw,setPw] =useState('');
 
   useEffect(()=>{
     console.log("화면이 보이는가")
@@ -16,10 +18,9 @@ const [pw,setPw] =useState('');
   const handleLoginEvent=()=>{
     if(!(id&&pw)){
       alert("아이디와 비밀번호는 공백이면 안됩니다.")
-      console.log('이건되냐?')
       return;
     }
-    console.log("떤냐?")
+    dispatch(login())
   }
 
 

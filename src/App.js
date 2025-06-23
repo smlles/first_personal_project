@@ -5,10 +5,15 @@ import React from 'react';
 import { Provider,useSelector } from 'react-redux';
 import store from './app/store';
 import BoardMain from './board/BoardMain';
+import { useEffect } from 'react';
 
 function App() {
 
   const isLoggedIn= useSelector(state=>state.auth.isLoggedIn);
+  useEffect(()=>{
+    console.log("isloginned?",isLoggedIn)
+  },[])
+  
 
   return (
     <div className="App">
@@ -19,10 +24,4 @@ function App() {
 
 export default App;
 
-export function Root(){
-  return(
-    <Provider store={store}>
-      <App/>
-    </Provider>
-  )
-}
+

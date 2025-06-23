@@ -8,13 +8,15 @@ const [id,setId] =useState('');
 const [pw,setPw] =useState('');
 
   useEffect(()=>{
-
+    console.log("화면이 보이는가")
+    
   },[id,pw])
 
 
   const handleLoginEvent=()=>{
     if(!(id&&pw)){
       alert("아이디와 비밀번호는 공백이면 안됩니다.")
+      console.log('이건되냐?')
       return;
     }
     console.log("떤냐?")

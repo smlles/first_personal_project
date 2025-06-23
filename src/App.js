@@ -10,6 +10,7 @@ import { Route,BrowserRouter,Routes } from 'react-router-dom';
 import PostDetail from './board/PostDetail';
 import EditPost from './board/EditPost';
 import WritePost from './board/WritePost';
+import { Navigate } from 'react-router-dom';
 
 
 
@@ -19,7 +20,7 @@ function App() {
   useEffect(()=>{
   
   },[])
-  
+ 
 
   return (
     <div className="App">
@@ -27,7 +28,13 @@ function App() {
         <Routes>
           {isLoggedIn 
             ? 
-            <Route path="/" element={<BoardMain/>}/>
+            <>
+              <Route path="/" element={<BoardMain/>}/>
+              <Route path="/posts/:id" element={<PostDetail/>}/>
+              <Route path="/edit" element={<EditPost/>}/>
+              <Route path="/write" element={<WritePost/>}/>
+              <Route path="*" element={<Navigate to="/" replace />}/>
+            </>//로그인 유무로 페이지 가르기
             
             :
             <Route path="*" element={<Login/>}/>}

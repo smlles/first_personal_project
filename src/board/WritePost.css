@@ -1,0 +1,77 @@
+.write-post-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.write-post-container h1 {
+  margin-bottom: 24px;
+  color: #333;
+  text-align: center;
+}
+
+.write-post-input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.write-post-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+.write-post-textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.write-post-textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+.write-button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-direction: row;
+  
+}
+
+
+
+.write-button-group .cancel-button {
+  background-color: #e0e0e0;
+  color: #555;
+   width: 20%;
+}
+
+.write-button-group .cancel-button:hover {
+  background-color: #cfcfcf;
+}
+
+.write-button-group .submit-button {
+  background-color: #007bff;
+  color: white;
+   width: 20%;
+}
+
+.write-button-group .submit-button:hover {
+  background-color: #0056b3;
+}

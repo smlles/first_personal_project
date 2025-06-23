@@ -1,8 +1,8 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { logout } from "../app/store";
-import "./BorderMain.css"
-import { Navigate } from "react-router-dom";
+import "./BordeMain.css"
+import { Navigate, useNavigate } from "react-router-dom";
 
 // 테스트용 더미 데이타
  const dummyPosts = [
@@ -28,14 +28,23 @@ import { Navigate } from "react-router-dom";
 
 const BoardMain=()=>{
   const dispatch=useDispatch();
+  const navigate=useNavigate();
 
   const logoutHandler=()=>{
     console.log('')
     dispatch(logout());
   }
 
-const GoPostToDetail=()=>{
-  
+const GoPostToDetail=(post)=>{
+  // console.log(`${post.index}, ${post.id}`)
+  navigate(`/posts/${post.id}`,{
+    state:{post}
+  })
+}
+
+const GoWritePost=()=>{
+  console.log('가주세요')
+  navigate('/write')
 }
 
 
@@ -61,7 +70,7 @@ const GoPostToDetail=()=>{
           {dummyPosts.map((post, index) => (
             <tr key={post.id}>
               <td>{index + 1}</td>
-              <td onClick={GoPostToDetail}>{post.title}</td>
+              <td onClick={()=>GoPostToDetail(post)}>{post.title}</td>
               <td>{post.author}</td>
               <td>{post.createdAt}</td>
               <td>{post.views}</td>
@@ -71,8 +80,8 @@ const GoPostToDetail=()=>{
         </tbody>
       </table>
       <div className="button-group">
-        <button onClick={logoutHandler} classname="logout-btn">🚪 로그아웃</button>
-        <button className="write-btn">✍ 글쓰기</button>
+        <button onClick={logoutHandler} className="logout-btn">🚪 로그아웃</button>
+        <button className="write-btn" onClick={GoWritePost}>✍ 글쓰기</button>
       </div>
     </div>
 

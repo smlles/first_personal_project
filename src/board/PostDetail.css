@@ -46,6 +46,7 @@
 }
 
 .back-button,
+.delete-button,
 .write-button {
   padding: 12px 24px;
   font-size: 15px;
@@ -71,4 +72,9 @@
 
 .write-button:hover {
   background-color: #0056b3;
+}
+
+.delete-button {
+  background-color: rgb(238, 40, 13);
+  color:white;
 }

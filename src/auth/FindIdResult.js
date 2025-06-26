@@ -28,7 +28,13 @@ useEffect(()=>{
             <p>아이디찾기결과 : {foundUser.username}</p>
             <button
                 className="primary-btn"
-                onClick={()=>navigate('/')}>로그인 화면으로</button>
+                onClick={()=>navigate('/')}>로그인 화면으로
+            </button>
+            <p>만약 비밀번호도 잊었다면?</p>
+            <button
+                className="primary-btn"
+                onClick={()=>navigate('/find/pw')}>비밀번호 찾기
+            </button>
         </div>
     )
 }

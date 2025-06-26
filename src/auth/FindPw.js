@@ -47,7 +47,7 @@ const CheckEmailHandler=()=>{
                 {/* 1안 : 여기에 그냥 가입한 아이디가 뜨게한다 */}
                 <div className="find-btn-group">
                     <button
-                        onClick={()=>navigate(-1)}>취소</button>
+                        onClick={()=>navigate("/find")}>취소</button>
                     <button
                         className="primary-btn"
                         onClick={CheckEmailHandler}>확인</button>

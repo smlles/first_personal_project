@@ -1,5 +1,5 @@
 import './Find.css'
-import '../App.css'
+import '../'
 import { useNavigate } from 'react-router-dom'
 
 
@@ -25,7 +25,7 @@ const Find=()=>{
                     className="primary-btn"
                     >비밀번호를 찾고 싶어요.</button>
                 <button
-                    onClick={()=>navigate(-1)}>취소</button>
+                    onClick={()=>navigate('/')}>취소</button>
             </div>
         </div>
     )

@@ -10,7 +10,7 @@ import { useLocation } from 'react-router-dom'
 
 
 
-
+// 얘는 이메일을 통한 재발급 기능을 구현하면 완전히 없앨 페이지
 const FindPwResult=()=>{
     const location=useLocation();
     const {email} = location.state||'';
